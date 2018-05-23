@@ -1,9 +1,9 @@
 // validate the given image details
 
-function validateFile(fileExtension)
+function validateFile(fileName)
         {
-            var allowedExtension = ['jpeg', 'jpg'];
-            
+            var allowedExtension = ['jpeg', 'jpg', 'gif', 'bmp'];
+           var fileExtension= fileName.split('.').pop().toLowerCase();
             // var fileExtension = document.getElementById('image').value.split('.').pop().toLowerCase();
             var isValidFile = false;
                 for(var index in allowedExtension) {
@@ -16,17 +16,17 @@ function validateFile(fileExtension)
               
                 return isValidFile;
         }
-   // var allowedExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+
 
 
 function previewFile() {
     var preview = document.querySelector('img');
     var h2=document.querySelector('h2')
-    var fileExtension= document.getElementById('image').value.split('.').pop().toLowerCase();
+    var fileName= document.getElementById('image').value
     h2.innerText=''
     preview.src=''
     
-if(validateFile(fileExtension)){
+if(validateFile(fileName)){
     
     var file    = document.querySelector('input[type=file]').files[0];
     var reader  = new FileReader();  

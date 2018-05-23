@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+  input[type="file"] {
+    display: none;
+}
+.container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center
+}
 
+</style>
 <head>
+  
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
   <title>upload image</title>
 </head>
 
 <body>
-  <!-- <form method=post src=upload enctype="multipart/form-data" onsubmit="return validateFile()">
-    <input name="img1" id="img1" type="file">
-    <input type="submit" value="Upload">
-    <img src="" alt="" srcset="" id="image">
-  </form>
 
-  <input name="fileToUpload" type="file" id="fileToUpload"/>
-<img id="preview" />
-<br>
-<br>
-<br>
-<br>
-<input type="file" onchange="onChange(event)"> -->
 <div class="container">
-  
-<input type="file" id="image" onchange="previewFile()"><br>
-<img src="" height="200" id="image-preview">
-<h2></h2>
+    <div>
+    <h1 align="center">Image upload</h1>
+    
+    <label for="image" align="center" class="btn custom-file-upload">
+        Click to Upload
+    </label>
+<input type="file" id="image" onchange="previewFile()" ><br>
+<img src="" height="500" id="image-preview">
+</div>
+<h2 class="red-text text-darken-2"></h2>
+
 </div>
   <script src="index.js"></script>
 </body>
