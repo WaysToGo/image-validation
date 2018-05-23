@@ -7,7 +7,6 @@ function validateFile(fileName)
             // var fileExtension = document.getElementById('image').value.split('.').pop().toLowerCase();
             var isValidFile = false;
                 for(var index in allowedExtension) {
-
                     if(fileExtension === allowedExtension[index]) {
                         isValidFile = true;
                         break;
@@ -26,11 +25,9 @@ function previewFile() {
     h2.innerText=''
     preview.src=''
     
-if(validateFile(fileName)){
-    
+if(validateFile(fileName)){    
     var file    = document.querySelector('input[type=file]').files[0];
     var reader  = new FileReader();  
-
   
     reader.addEventListener("load", function () {
       preview.src = reader.result;
