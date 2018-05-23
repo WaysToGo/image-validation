@@ -9,11 +9,25 @@
 </head>
 
 <body>
-  <form method=post src=upload enctype="multipart/form-data" onsubmit="return validateFile()">
+  <!-- <form method=post src=upload enctype="multipart/form-data" onsubmit="return validateFile()">
     <input name="img1" id="img1" type="file">
     <input type="submit" value="Upload">
     <img src="" alt="" srcset="" id="image">
   </form>
+
+  <input name="fileToUpload" type="file" id="fileToUpload"/>
+<img id="preview" />
+<br>
+<br>
+<br>
+<br>
+<input type="file" onchange="onChange(event)"> -->
+<div class="container">
+  
+<input type="file" id="image" onchange="previewFile()"><br>
+<img src="" height="200" id="image-preview">
+<h2></h2>
+</div>
   <script src="index.js"></script>
 </body>
 
